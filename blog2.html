@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #A39991;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        p {
+            color: rgb(230, 230, 230);
+            text-align: center;
+            font-size: 17px;
+            letter-spacing: 1px;
+        }
+        
+        #main {
+            background-color: #EEE4DA;
+            width: 50%;
+            margin: auto;
+            padding: 40px;
+        }
+        
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #74665B;
+            font-size: 20px;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            color: #74665B;
+            background-color: transparent;
+            border: 2px solid #74665B;
+        }
+        
+        textarea:hover {
+            box-shadow: 0 0 10px #74665B;
+        }
+        
+        input:hover {
+            box-shadow: 0 0 10px #74665B;
+        }
+        
+        #submit {
+            padding: 15px 30px;
+            background-color: #74665B;
+            color: white;
+            border: none;
+            letter-spacing: 1px;
+            font-size: 18px;
+        }
+        /* .blog-post {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+         */
+        
+        #blog-post div {
+            margin: 20px;
+            width: 80%;
+            background-color: #EEE4DA;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        #blog-post img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        #blog-post {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        
+        .like,
+        .dlt {
+            margin: 10px;
+            margin: 10px 10px;
+            background-color: #74665B;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        /* .dlt:hover {
+            box-shadow: 0 0 10px #74665B;
+        } */
+        
+        .category {
+            font-size: 30px !important;
+            color: #74665B !important;
+            letter-spacing: 1px;
+        }
+        
+        .content {
+            color: #433b33 !important;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: px !important;
+            color: #74665B !important;
+        }
+        
+        @media (max-width:500px) {
+            #blog-post {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media (min-width:501px) and (max-width:650px) {
+            #blog-post {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width:655px) and (max-width:800px) {
+            #blog-post {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width:801px) and (max-width:1100px) {
+            #blog-post {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Create a Blog</h1>
+        <p>Share your story with the world. Build, manage, and promotebr your blog with <br> Squarespace’s built-in suite of design and marketing tools.</p>
+        <div id="main">
+            <form id="blogForm">
+                <h2>Blog with the best.</h2>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title">
+
+                <label for="img">Image URL:</label>
+                <input type="text" id="image" name="image">
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category">
+
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" rows="4"></textarea>
+
+                <label for="author">Author Name:</label>
+                <input type="text" id="author" name="author">
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- <div id="blogDisplay"></div> -->
+        <div id="blog-post">
+        </div>
+        <script src="./blog2.js"></script>
+</body>
+
+</html>
